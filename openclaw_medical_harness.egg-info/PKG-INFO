@@ -1,0 +1,66 @@
+Metadata-Version: 2.4
+Name: openclaw-medical-harness
+Version: 0.2.0
+Summary: Medical AI Agent Orchestration Framework for OpenClaw
+Author-email: MoKangMedical <mokangmedical@example.com>
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: pydantic>=2.0.0
+Provides-Extra: server
+Requires-Dist: fastapi>=0.104.0; extra == "server"
+Requires-Dist: uvicorn>=0.24.0; extra == "server"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+
+# OpenClaw-Medical-Harness
+
+Medical AI agent orchestration framework built around reusable harness design.
+
+This local working copy restores the package surface used by the published
+repository and adds a stronger tool registry layer:
+
+- `MedicalToolRegistry.list_all()`
+- `MedicalToolRegistry.get_tools_for_harness()`
+- alias compatibility such as `pubmed_search`, `chembl_query`,
+  `opentargets_association`, `omim_lookup`, `openfda_safety`
+- Demo Server health check no longer calls a missing registry method
+- Xiaomi MiMo media integration for:
+  - speech synthesis via `mimo-v2-tts`
+  - audio understanding via `mimo-v2-omni`
+  - video understanding via `mimo-v2-omni`
+  - video production package generation via `mimo-v2-pro`
+
+## MiMo Runtime
+
+Configure the MiMo key in `.env`:
+
+```bash
+MIMO_API_KEY=your-key
+MIMO_API_BASE_URL=https://api.xiaomimimo.com/v1
+```
+
+The demo server exposes:
+
+- `GET /media/runtime`
+- `GET /api/tools`
+- `GET /api/toolchains`
+- `POST /api/tools/{tool_name}/execute`
+- `POST /api/toolchains/{harness_type}/execute`
+- `POST /api/openclaw/execute`
+- `POST /media/audio/synthesize`
+- `POST /media/audio/analyze`
+- `POST /media/video/analyze`
+- `POST /media/video/create`
+
+`/media/video/create` generates a storyboard/narration/caption package with MiMo.
+It does not render an MP4 because Xiaomi's public MiMo docs currently expose video
+understanding, not rendered video generation.
+
+The demo API is also configured with permissive CORS (`*` origins, methods, and
+headers) so browser clients can call the registered OpenClaw tools directly.
+
+`POST /api/openclaw/execute` is the unified entry point. Send `{"target": "...",
+"kind": "auto"}` to let the server resolve whether the target is a tool alias
+or a named toolchain.
