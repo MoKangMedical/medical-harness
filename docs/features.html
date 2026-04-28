@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Features - Medical Harness</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#ec4899;--bg:#0a0a0f;--s:#12121a;--t:#e2e8f0;--m:#94a3b8;--b:rgba(255,255,255,.06)}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--t);line-height:1.6}
+a{color:var(--p);text-decoration:none}
+.nav{position:fixed;top:0;left:0;right:0;background:rgba(10,10,15,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--b);z-index:1000;padding:.8rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.nb{font-size:1.2rem;font-weight:700;color:var(--p)}
+.nl{display:flex;gap:1.5rem;align-items:center}
+.nl a{color:var(--m);font-size:.85rem;transition:color .2s}
+.nl a:hover{color:var(--t)}
+.hero{padding:8rem 2rem 4rem;text-align:center}
+.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:.5rem}
+.hero p{color:var(--m);max-width:600px;margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem;max-width:1200px;margin:0 auto;padding:2rem}
+.card{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:2rem;transition:all .3s}
+.card:hover{border-color:#ec489944;transform:translateY(-4px)}
+.card h3{font-size:1.2rem;margin-bottom:.5rem}
+.card p{color:var(--m);font-size:.95rem}
+.card-icon{font-size:2rem;margin-bottom:1rem}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:5rem 2rem 0;font-size:.85rem;color:var(--m)}
+.breadcrumb a{color:var(--p)}
+footer{background:var(--s);border-top:1px solid var(--b);padding:2rem;text-align:center;margin-top:4rem}
+footer a{color:var(--m);margin:0 1rem;font-size:.85rem}
+@media(max-width:768px){.grid{grid-template-columns:1fr}.nl{display:none}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a href="/" class="nb">Medical Harness</a>
+<div class="nl"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="https://github.com/MoKangMedical/medical-harness">GitHub</a></div>
+</nav>
+<div class="breadcrumb"><a href="index.html">Home</a> / Features</div>
+<section class="hero"><h1>Features</h1><p>Comprehensive capabilities designed for healthcare professionals</p></section>
+<div class="grid"><div class="card"><div class="card-icon">🏥</div><h3>Clinical Testing</h3><p>Automated testing framework for medical AI models.</p></div><div class="card"><div class="card-icon">📊</div><h3>Benchmark Suite</h3><p>Standard benchmarks for healthcare AI evaluation.</p></div><div class="card"><div class="card-icon">🔒</div><h3>Compliance Check</h3><p>Automated regulatory compliance verification.</p></div><div class="card"><div class="card-icon">📈</div><h3>Performance Metrics</h3><p>Comprehensive metrics for model evaluation.</p></div><div class="card"><div class="card-icon">🔗</div><h3>CI/CD Integration</h3><p>Seamless integration with development workflows.</p></div><div class="card"><div class="card-icon">📋</div><h3>Report Generation</h3><p>Automated evaluation reports for stakeholders.</p></div></div>
+<footer>
+<a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a>
+<a href="https://github.com/MoKangMedical/medical-harness">GitHub</a>
+<p style="color:var(--m);font-size:.8rem;margin-top:1rem">&copy; 2026 MoKangMedical</p>
+</footer>
+</body></html>
