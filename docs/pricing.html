@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing - Medical Harness</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0e1a;--bg2:#111827;--text:#f1f5f9;--dim:#94a3b8;--border:#1e293b;--accent:#3b82f6;--accent2:#8b5cf6}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,sans-serif;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,14,26,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:.8rem 0}
+nav .inner{max-width:1200px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between}
+nav .logo{font-weight:700;color:var(--text)}nav .links{display:flex;gap:1.5rem}nav .links a{color:var(--dim);font-size:.85rem}
+.hero{padding:8rem 2rem 3rem;text-align:center}
+.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:.5rem}
+.hero p{color:var(--dim);font-size:1.1rem}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;max-width:1000px;margin:3rem auto;padding:0 2rem}
+.tier{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;transition:all .3s}
+.tier:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+.tier.featured{border-color:var(--accent);position:relative}
+.tier.featured::before{content:'Most Popular';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;padding:4px 16px;border-radius:20px;font-size:.75rem;font-weight:600}
+.tier-name{font-size:1.2rem;font-weight:700;margin-bottom:.5rem}
+.tier-price{font-size:3rem;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.tier-period{color:var(--dim);font-size:.85rem;margin-bottom:1.5rem}
+.tier-features{list-style:none;text-align:left;margin-bottom:2rem}
+.tier-features li{padding:.4rem 0;color:var(--dim);font-size:.9rem;border-bottom:1px solid rgba(30,41,59,.5)}
+.tier-features li::before{content:'✓ ';color:#10b981;font-weight:700}
+.btn{display:inline-block;padding:.8rem 2rem;border-radius:10px;font-weight:600;cursor:pointer;transition:all .3s;border:none;font-size:.95rem}
+.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 4px 20px rgba(59,130,246,.4)}
+.btn-outline{background:transparent;color:var(--text);border:1px solid var(--border)}
+.btn-outline:hover{border-color:var(--accent)}
+.faq{max-width:700px;margin:4rem auto;padding:0 2rem}
+.faq h2{font-size:1.8rem;font-weight:700;margin-bottom:1.5rem;text-align:center}
+.faq-item{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.2rem 1.5rem;margin-bottom:1rem}
+.faq-item h4{font-size:1rem;font-weight:600;margin-bottom:.3rem}
+.faq-item p{color:var(--dim);font-size:.9rem}
+footer{padding:3rem 2rem;text-align:center;color:var(--dim);font-size:.8rem;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<nav><div class="inner"><a href="index.html" class="logo">Medical Harness</a><div class="links"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="https://github.com/MoKangMedical" target="_blank">GitHub</a></div></div></nav>
+<section class="hero">
+<h1>Simple, Transparent Pricing</h1>
+<p>Choose the plan that fits your Medical Harness workflow</p>
+</section>
+<div class="pricing-grid">
+    <div class="tier">
+      <div class="tier-name">Free</div>
+      <div class="tier-price">Free</div>
+      <div class="tier-period">Forever</div>
+      <ul class="tier-features">
+        <li>Core functionality</li><li>Limited usage</li><li>Community support</li>
+      </ul>
+      <a href="https://github.com/MoKangMedical" class="btn btn-outline">Get Started</a>
+    </div>
+    <div class="tier featured">
+      <div class="tier-name">Pro</div>
+      <div class="tier-price">$19</div>
+      <div class="tier-period">/month</div>
+      <ul class="tier-features">
+        <li>Full functionality</li><li>Unlimited usage</li><li>Priority support</li><li>API access</li>
+      </ul>
+      <a href="#" class="btn btn-primary">Start Free Trial</a>
+    </div></div>
+<section class="faq">
+<h2>Frequently Asked Questions</h2>
+<div class="faq-item"><h4>Can I switch plans anytime?</h4><p>Yes, upgrade or downgrade at any time. Changes take effect immediately.</p></div>
+<div class="faq-item"><h4>Is there a free trial?</h4><p>All paid plans include a 14-day free trial. No credit card required.</p></div>
+<div class="faq-item"><h4>What payment methods do you accept?</h4><p>We accept all major credit cards, PayPal, and wire transfers for Enterprise plans.</p></div>
+</section>
+<footer><p>Part of <a href="https://mokangmedical.github.io/opc-homepage/">MoKangMedical OPC Ecosystem</a></p></footer>
+</body>
+</html>
